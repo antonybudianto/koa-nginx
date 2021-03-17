@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: koa-kube-app
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+    app: koa-kube-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: koa-kube-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: koa-kube-app
+  template:
+    metadata:
+      labels:
+        app: koa-kube-app
+    spec:
+      containers:
+        - name: koa-kube-app
+          image: antonybudianto/koa-kube-app:1.1
+          ports:
+            - containerPort: 3000

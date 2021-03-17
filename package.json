@@ -1,0 +1,25 @@
+{
+  "name": "koa-kube",
+  "version": "1.0.0",
+  "description": "koa kube",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonybudianto/koa-kube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonybudianto/koa-kube/issues"
+  },
+  "homepage": "https://github.com/antonybudianto/koa-kube#readme",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8"
+  }
+}
