@@ -1,7 +1,7 @@
 {
-  "name": "koa-kube",
+  "name": "koa-nginx",
   "version": "1.0.0",
-  "description": "koa kube",
+  "description": "koa nginx",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antonybudianto/koa-kube.git"
+    "url": "git+https://github.com/antonybudianto/koa-nginx.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/antonybudianto/koa-kube/issues"
+    "url": "https://github.com/antonybudianto/koa-nginx/issues"
   },
-  "homepage": "https://github.com/antonybudianto/koa-kube#readme",
+  "homepage": "https://github.com/antonybudianto/koa-nginx#readme",
   "dependencies": {
     "koa": "^2.11.0",
     "koa-router": "^8.0.8"

@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-WORKDIR /usr/src/koa-kube-app
+WORKDIR /usr/src/koa-nginx-app
 
 COPY package.json yarn.lock ./
 
