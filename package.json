@@ -4,7 +4,7 @@
   "description": "koa nginx",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "NODE_OPTIONS=--max_old_space_size=60 NODE_ENV=production node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
