@@ -9,6 +9,7 @@ app.use(async (ctx) => {
     return;
   }
 
+  console.log("req>", ctx.path, ctx.querystring);
   ctx.response.type = "text/html";
   ctx.body = `
     <!DOCTYPE html>
