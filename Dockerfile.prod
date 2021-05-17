@@ -1,0 +1,13 @@
+FROM node:10-alpine
+
+WORKDIR /usr/data/koa-app
+
+COPY package.json yarn.lock ./
+
+RUN yarn install --production
+
+COPY index.js server.js ./
+
+EXPOSE 3000
+
+CMD ["node", "index.js"]

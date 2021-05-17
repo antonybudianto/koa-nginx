@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  demo_nginx:
+    image: nginx
+    volumes:
+      - ./public/:/usr/share/nginx/html/
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+    ports:
+      - 8000:80
+  koa_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    restart: always
+    # volumes:
+    #   - ".:/usr/data/koa-app"
+    #   - "/usr/data/koa-app/node_modules"
+    # ports:
+    #   - 3000:3000
