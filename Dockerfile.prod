@@ -2,6 +2,8 @@ FROM node:10-alpine
 
 WORKDIR /usr/data/koa-app
 
+RUN npm i -g pm2@4.5.6
+
 COPY package.json yarn.lock ./
 
 RUN yarn install --production
@@ -10,4 +12,4 @@ COPY index.js server.js ./
 
 EXPOSE 3000
 
-CMD ["node", "index.js"]
+CMD ["pm2-runtime", "start", "index.js", "-i", "max"]
