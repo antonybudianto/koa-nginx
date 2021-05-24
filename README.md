@@ -15,7 +15,7 @@ docker update --restart=no $(docker container ls -a -q)
 To run prod
 
 ```
-docker-compose -f docker-compose-prod.yml up
+docker-compose -f docker-compose-prod.yml up --build
 ```
 
 ### License
