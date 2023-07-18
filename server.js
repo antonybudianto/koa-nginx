@@ -8,13 +8,22 @@ app.use(async (ctx) => {
     return;
   }
 
-  console.log("req>", ctx.path, ctx.querystring);
+  const HOST = ctx.get("Host");
+
+  console.log("req>", ctx.path, ctx.querystring, "host:", ctx.get("Host"));
   ctx.response.type = "text/html";
   ctx.body = `
     <!DOCTYPE html>
     <html>
       <body>
-        <h1>Hello Koa</h1>
+        <h1>Hello Koa ${HOST}</h1>
+
+        ${
+          HOST === "dev1.qontak.local"
+            ? `<iframe src="http://dev2.qontak.local:8000/">`
+            : "Dev2"
+        }
+        
       </body>
     </html>
   `;
